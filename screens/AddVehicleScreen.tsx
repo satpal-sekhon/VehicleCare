@@ -1,11 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import CustomHeader from '../components/CustomHeader';
 
-const AddVehicleScreen: React.FC = () => {
+const AddVehicleScreen: React.FC = ({ navigation }: any) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Add Vehicle</Text>
-      {/* Add form or input components for adding a new vehicle */}
+    <View>
+      <CustomHeader title="Add Vehicle" onBackPress={() => navigation.navigate('Vehicles')} />
+
+      <View style={styles.container}>
+        <Text style={styles.title}>Add Vehicle</Text>
+      </View>
     </View>
   );
 };

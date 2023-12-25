@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
-import CustomHeader from "../components/CustomHeader";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -10,7 +9,7 @@ function HomeStackScreen() {
       <HomeStack.Screen
         name="MyHome"
         component={HomeScreen}
-        options={{ header: () => <CustomHeader title="Home" /> }}
+        options={{ headerShown: false }}
       />
     </HomeStack.Navigator>
   );

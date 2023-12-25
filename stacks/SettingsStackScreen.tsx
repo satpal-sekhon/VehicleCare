@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SettingsScreen from "../screens/SettingsScreen";
-import CustomHeader from "../components/CustomHeader";
 
 const SettingsStack = createNativeStackNavigator();
 
@@ -10,7 +9,7 @@ function SettingsStackScreen() {
       <SettingsStack.Screen
         name="MySettings"
         component={SettingsScreen}
-        options={{ header: () => <CustomHeader title="Settings" /> }}
+        options={{ headerShown: false }}
       />
     </SettingsStack.Navigator>
   );

@@ -1,18 +1,22 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import WarningMessage from '../components/WarningMessage';
+import CustomHeader from '../components/CustomHeader';
 
 const HomeScreen: React.FC = () => {
 
   const handleWarningClick = () => {
     console.log('Warning clicked. Hiding message.');
   };
-  
-  return (
-    <View style={styles.container}>
-      <Text style={styles.helloName}>Hello Satpal 👋</Text>
-      <WarningMessage text='PUC is expiring in 15 days' close={handleWarningClick} />
 
+  return (
+    <View>
+      <CustomHeader title="Home" />
+
+      <View style={styles.container}>
+        <Text style={styles.helloName}>Hello Satpal 👋</Text>
+        <WarningMessage text='PUC is expiring in 15 days' close={handleWarningClick} />
+      </View>
     </View>
   );
 };

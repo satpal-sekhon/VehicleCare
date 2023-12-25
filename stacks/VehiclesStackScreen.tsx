@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MyVehiclesScreen from "../screens/MyVehiclesScreen";
 import AddVehicleScreen from "../screens/AddVehicleScreen";
-import CustomHeader from "../components/CustomHeader";
 
 const VehiclesStack = createNativeStackNavigator();
 
@@ -11,11 +10,12 @@ function VehiclesStackScreen() {
       <VehiclesStack.Screen
         name="Vehicles"
         component={MyVehiclesScreen}
-        options={{ header: () => <CustomHeader title="My Vehicles" /> }}
+        options={{ headerShown: false }}
       />
       <VehiclesStack.Screen
         name="AddVehicle"
         component={AddVehicleScreen}
+        options={{ headerShown: false }}
       />
     </VehiclesStack.Navigator>
   );
