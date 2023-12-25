@@ -27,12 +27,27 @@ function App() {
 
             return <Icon name={iconName || ''} size={size} color={color} />;
           },
-          tabBarActiveTintColor: 'tomato',
-          tabBarInactiveTintColor: 'gray',
+          tabBarActiveTintColor: '#19535F',
+          tabBarInactiveTintColor: '#19535F',
+          tabBarStyle: {
+            display: 'flex',
+            position: 'absolute',
+            bottom: 20,
+            left: 25,
+            right: 25,
+            elevation: 5,
+            backgroundColor: '#9CADCE',
+            borderRadius: 30,
+            height: 60,
+          },
+          tabBarShowLabel: false,
+          headerShown: false,
+
         })}
+
       >
         <Tab.Screen name="Home" component={HomeStackScreen} options={{ headerShown: false }} />
-        <Tab.Screen name="MyVehicles" component={VehiclesStackScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="MyVehicles" component={VehiclesStackScreen} options={{ headerShown: false, title: 'My Vehicless' }} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} options={{ headerShown: false }} />
       </Tab.Navigator>
     </NavigationContainer>

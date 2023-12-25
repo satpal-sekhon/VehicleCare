@@ -1,22 +1,31 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import WarningMessage from '../components/WarningMessage';
 
 const HomeScreen: React.FC = () => {
+
+  const handleWarningClick = () => {
+    console.log('Warning clicked. Hiding message.');
+  };
+  
   return (
     <View style={styles.container}>
-      <Icon name="home" size={30} color="#900" />
+      <Text style={styles.helloName}>Hello Satpal 👋</Text>
+      <WarningMessage text='PUC is expiring in 15 days' close={handleWarningClick} />
 
-      <Text style={styles.text}>Welcome to Your App!</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 16
+  },
+  helloName: {
+    color: '#333',
+    fontSize: 24,
+    marginBottom: 8,
+    fontWeight: '700'
   },
   text: {
     fontSize: 20,
