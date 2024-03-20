@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   title: {
-    flex: 1, // Ensure the title takes up available space vertically
+    flex: 1,
     fontSize: 18,
     color: '#fff',
     fontWeight: 'bold',
-    textAlign: 'center', // Center the title horizontally
+    textAlign: 'center',
   },
   userIcon: {
     backgroundColor: '#9CADCE',
